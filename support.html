@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SharpList Support</title>
+    <meta name="description" content="Support and help for SharpList — the smart grocery list app for iPhone.">
+    <style>
+        :root {
+            --accent: #007AFF;
+            --bg: #ffffff;
+            --text: #1c1c1e;
+            --muted: #6c6c70;
+            --border: #e5e5ea;
+            --card: #f7f7f9;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --accent: #0a84ff;
+                --bg: #000000;
+                --text: #f2f2f7;
+                --muted: #98989d;
+                --border: #2c2c2e;
+                --card: #1c1c1e;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+        header img.logo {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin-bottom: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+        header h1 {
+            font-size: 2.4rem;
+            margin: 0 0 8px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        header p {
+            color: var(--muted);
+            margin: 0;
+            font-size: 1.05rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin: 40px 0 16px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-size: 1.05rem;
+            margin: 16px 0 6px;
+            font-weight: 600;
+        }
+        p {
+            margin: 0 0 12px;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact-card {
+            background: var(--card);
+            padding: 24px;
+            border-radius: 14px;
+            margin: 16px 0;
+        }
+        .contact-card p:last-child { margin-bottom: 0; }
+        details {
+            background: var(--card);
+            padding: 14px 18px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        details summary {
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            padding-right: 24px;
+        }
+        details summary::-webkit-details-marker { display: none; }
+        details summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.3rem;
+            color: var(--muted);
+            transition: transform 0.2s;
+        }
+        details[open] summary::after {
+            content: "−";
+        }
+        details > *:not(summary) {
+            margin-top: 12px;
+        }
+        .legal-links {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .legal-links a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="SharpList" class="logo">
+            <h1>SharpList Support</h1>
+            <p>Need help? You're in the right place.</p>
+        </header>
+
+        <section>
+            <h2>Contact Us</h2>
+            <div class="contact-card">
+                <p>The fastest way to reach us is through the in-app feedback form:</p>
+                <p><strong>Open SharpList → ≡ menu → Send Feedback</strong></p>
+                <p>You can also email us directly at <a href="mailto:support@sharplist.app">support@sharplist.app</a>. We aim to reply within 2 business days.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+                <summary>How do I add items to a list?</summary>
+                <p>Tap the <strong>+</strong> button at the top right of the list. Start typing and SharpList will suggest items from its built-in catalog and from items you've added before. Tap a suggestion to add it instantly.</p>
+            </details>
+
+            <details>
+                <summary>How do I add items using Siri?</summary>
+                <p>Say something like <em>"Add milk using SharpList"</em> or <em>"Add milk and eggs to My Grocery List using SharpList"</em>. Always include "using SharpList" so Siri uses the app instead of Reminders.</p>
+                <p>Tip: if Siri redirects to Apple Health when you say "add water", say <em>"add mineral water"</em> or <em>"add a bottle of water"</em> instead.</p>
+            </details>
+
+            <details>
+                <summary>How do I share a list with family?</summary>
+                <p>Open the list, tap the gear icon (⚙️) and choose <strong>Share List</strong>. Add a person by email or from your contacts. Both of you must have iCloud enabled. Changes sync in real time.</p>
+            </details>
+
+            <details>
+                <summary>How do I add a quantity to an item?</summary>
+                <p>Swipe an item to the left and tap the <strong>+</strong> button. Choose a count or unit. Tap <strong>×100</strong> for larger amounts like 500 g or 2 L.</p>
+            </details>
+
+            <details>
+                <summary>How do I sort items by category?</summary>
+                <p>Tap the gear icon (⚙️) and choose <strong>By Category</strong>. To change an item's category, tap the <strong>⋯</strong> button on the item and choose a new one (or create your own).</p>
+            </details>
+
+            <details>
+                <summary>How do I create more lists?</summary>
+                <p>Go back to the Lists screen (the back arrow at the top left) and tap <strong>+</strong> to create a new list. You can switch between lists at any time.</p>
+            </details>
+
+            <details>
+                <summary>How do I cancel my subscription?</summary>
+                <p>Subscriptions are managed by Apple, not by SharpList. On your iPhone, open <strong>Settings → [Your Name] → Subscriptions</strong>, select SharpList, and tap <strong>Cancel Subscription</strong>.</p>
+                <p>Alternatively, in the app, open the ≡ menu and tap <strong>Manage Subscription</strong>.</p>
+            </details>
+
+            <details>
+                <summary>How do I restore my purchases on a new device?</summary>
+                <p>Open the ≡ menu in the app and tap <strong>Restore Purchases</strong>. Make sure you're signed in to the same Apple ID you used for the original purchase.</p>
+            </details>
+
+            <details>
+                <summary>I'm having trouble with iCloud sync. What can I do?</summary>
+                <p>Make sure you're signed in to iCloud and that iCloud Drive is enabled (Settings → [Your Name] → iCloud). If the problem persists, please contact us with a description of the issue and your device model.</p>
+            </details>
+
+            <details>
+                <summary>Where is the in-app help?</summary>
+                <p>Open the ≡ menu and tap <strong>Help</strong>. You'll find tips for adding items, managing quantities, sorting, sharing, and using Siri.</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Reporting a Bug</h2>
+            <p>If you find a bug, please send a feedback message from the app (≡ menu → Send Feedback) or email us. Include your device model, iOS version, and a description of what happened. The feedback form automatically attaches some of this information for us.</p>
+        </section>
+
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+        </div>
+    </div>
+</body>
+</html>
